@@ -1,19 +1,16 @@
 def miniMaxSum(arr):
+    arr.sort()
+    max_sum = 0
+    min_sum = 0
     sum = 0
-    sums_list = []
 
     for int in arr:
         sum += int
-        print(sum)
 
-    for int in arr:
-        sum -= int
-        sums_list.append(sum)
-        sum += int
-    
-    sums_list.sort()
+    max_sum = sum - arr[0]
+    min_sum = sum - arr[4]
 
-    print(sums_list[0], sums_list[4])
+    print(min_sum, max_sum)
     
 
     
